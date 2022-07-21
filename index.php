@@ -27,11 +27,8 @@ $selectContinent = $selectContinentQuery->fetchAll();
 
 // Régions
 // $selectRegionRequete = 'SELECT * FROM t_regions';
-
-
 $selectRegionQuery = $db->query($selectRegionRequete);
 $selectRegion = $selectRegionQuery->fetchAll();
-
 
 ?>
 <link rel="stylesheet" href="style.css">
