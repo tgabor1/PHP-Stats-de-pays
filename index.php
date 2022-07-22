@@ -126,7 +126,7 @@ $total = $selectTotalQuery->fetchAll();
             </tbody>
             <tfoot>
                 <tr>
-                    <td>Monde</td>
+                    <td>Total</td>
                     <td><?= $total['0']['po'] ?></td>
                     <td><?= $total['0']['nat'] ?></td>
                     <td><?= $total['0']['mor'] ?></td>
