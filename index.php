@@ -1,14 +1,17 @@
 <?php
+// requiert obligatoirement le fichier connect.php
 require_once 'connect.php';
+
+// j'affiche la liste de tous mes pays
 $requete = 'SELECT * FROM t_pays';
 
 if(isset($_GET["continent"])){ // si let GET Continent exist
     //alors chqnger la requette par rapport au cotinent dan le get
     $selectRegionRequete = 'SELECT * FROM t_regions WHERE continent_id ='.$_GET["continent"];
     $requete = 'SELECT * FROM t_pays WHERE  continent_id ='.$_GET["continent"];
-}
-elseif($_GET["region"]){
-    $requete = 'SELECT * FROM t_pays WHERE  continent_id ='.$_GET["continent"] . ' AND region_id ='.$_GET["region"];
+    if($_GET["region"]){
+        $requete = 'SELECT * FROM t_pays WHERE  continent_id ='.$_GET["continent"] . ' AND region_id ='.$_GET["region"];
+    }
 }
 else{
     // si non afficher tout les regions
